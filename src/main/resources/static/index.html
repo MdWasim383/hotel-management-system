@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hotel Management System</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- ================= SIDEBAR ================= -->
+
+  <aside class="sidebar">
+
+    <div class="brand">
+      🏨
+      <span>
+                Hotel<span class="accent">Pro</span>
+            </span>
+    </div>
+
+    <div class="profile">
+
+      <div class="avatar">
+        A
+      </div>
+
+      <div>
+        <b>Administrator</b>
+        <small>Hotel Operations</small>
+      </div>
+
+    </div>
+
+    <nav id="menu">
+
+      <a class="nav active" data-page="dashboard">
+        📊 Dashboard
+      </a>
+
+      <a class="nav" data-page="rooms">
+        🛏️ Rooms
+      </a>
+
+      <a class="nav" data-page="guests">
+        👤 Guests
+      </a>
+
+      <a class="nav" data-page="reservations">
+        📅 Reservations
+      </a>
+
+      <a class="nav" data-page="checkins">
+        🛎️ Check-In
+      </a>
+
+      <a class="nav" data-page="checkouts">
+        🚪 Check-Out
+      </a>
+
+      <a class="nav" data-page="food">
+        🍽️ Food Orders
+      </a>
+
+      <a class="nav" data-page="services">
+        🧹 Hotel Services
+      </a>
+
+      <a class="nav" data-page="housekeeping">
+        🧼 Housekeeping
+      </a>
+
+      <a class="nav" data-page="payments">
+        💳 Payments
+      </a>
+
+      <a class="nav" data-page="employees">
+        👨‍💼 Employees
+      </a>
+
+      <a class="nav" data-page="feedback">
+        ⭐ Feedback
+      </a>
+
+      <a class="nav" data-page="maintenance">
+        🔧 Maintenance
+      </a>
+
+      <a class="nav" data-page="notifications">
+        🔔 Notifications
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <!-- ================= MAIN CONTENT ================= -->
+
+  <main class="main">
+
+    <header class="topbar">
+
+      <div>
+
+        <h1 id="pageTitle">
+          Dashboard
+        </h1>
+
+        <p id="pageSub">
+          Hotel operations overview
+        </p>
+
+      </div>
+
+
+      <div class="top-actions">
+
+        <span id="clock"></span>
+
+        <button onclick="openChat()">
+          💬 Chatbot
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <section id="content"></section>
+
+  </main>
+
+</div>
+
+
+<!-- ================= CHATBOT ================= -->
+
+<div id="chat" class="chat hidden">
+
+  <div class="chat-head">
+
+    <b>
+      🤖 Hotel Assistant
+    </b>
+
+    <button
+            type="button"
+            onclick="openChat()">
+      ×
+    </button>
+
+  </div>
+
+
+  <div id="messages" class="messages">
+
+    <div class="bot">
+
+      Hello! I can help with rooms,
+      bookings, check-in, check-out,
+      food, services and feedback.
+
+    </div>
+
+  </div>
+
+
+  <div class="chat-input">
+
+    <input
+            id="chatInput"
+            placeholder="Ask something..."
+    >
+
+    <button onclick="sendChat()">
+      Send
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<!-- ADDED/FIXED: Complete modal structure -->
+
+<div id="modal" class="modal hidden">
+
+  <div class="modal-card">
+
+    <button
+            class="close"
+            type="button"
+            onclick="closeModal()">
+
+      ×
+
+    </button>
+
+
+    <!-- ADDED/FIXED: Form content is inserted here -->
+
+    <div
+            id="modalBody"
+            class="modal-body">
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
